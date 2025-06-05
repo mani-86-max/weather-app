@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+
+    <!-- Input section -->
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+    <button onclick="getWeather()">Get Weather</button>
+
+    <!--- Unit toggle -->
+    <div class="unit-toggle">
+      <label>
+        <input type="checkbox" id="unitToggle" onchange="getWeather()" />
+        Show in Fahrenheit
+      </label>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <!-- Weather result display -->
+    <div id="weatherResult"></div>
+
+    <!-- Recent searches -->
+    <div class="recent-searches">
+      <h3>Recent Searches:</h3>
+      <ul id="recentSearches"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
